@@ -1,6 +1,6 @@
 import { EquipeService } from './../../services/equipe.service';
-import { Equipe } from './../../models/equipe';
 import { Component, OnInit } from '@angular/core';
+import { User } from '../../models/user';
 
 @Component({
   selector: 'app-equipe',
@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./equipe.component.scss']
 })
 export class EquipeComponent implements OnInit {
-  team: Equipe[];
+  team: User[];
 
   constructor(private equipeService: EquipeService) { }
 

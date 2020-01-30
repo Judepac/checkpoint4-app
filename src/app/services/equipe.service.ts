@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Equipe } from '../models/equipe';
+import { User } from '../models/user';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,7 @@ export class EquipeService {
 
   constructor(private http: HttpClient) { }
 
-  getTeam(): Observable<Equipe[]> {
-    return this.http.get<Equipe[]>(EquipeService.URL + '/formateur');
+  getTeam(): Observable<User[]> {
+    return this.http.get<User[]>(EquipeService.URL + '/formateur');
   }
 }

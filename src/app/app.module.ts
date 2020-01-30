@@ -8,11 +8,13 @@ import { AccueilComponent } from './page/accueil/accueil.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { QuiComponent } from './components/qui/qui.component';
 import { EquipeComponent } from './components/equipe/equipe.component';
-import { CoursComponent } from './components/cours/cours.component';
+import { CoursComponent } from './page/accueil/cours/cours.component';
 import { ProfilComponent } from './components/profil/profil.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { BienvenuComponent } from './components/bienvenu/bienvenu.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DisciplineComponent } from './page/accueil/cours/discipline/discipline.component';
+import { GenreComponent } from './page/accueil/cours/genre/genre.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +25,9 @@ import { HttpClientModule } from '@angular/common/http';
     CoursComponent,
     ProfilComponent,
     ContactComponent,
-    BienvenuComponent
+    BienvenuComponent,
+    GenreComponent,
+    DisciplineComponent
     ],
   imports: [
     BrowserModule,

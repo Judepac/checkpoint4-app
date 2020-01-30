@@ -1,0 +1,15 @@
+#cours{
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: white;
+  h2{
+    font-size: 2vw;
+    font-family: Merriweather;
+    margin: 0 0 17px 4vw;
+  }
+  app-genre{
+    margin-bottom: 7%;
+  }
+}
