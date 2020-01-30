@@ -5,7 +5,7 @@ import { Genre } from './genre';
 export class Discipline {
   public id: number;
   public name: string;
-  public durée: number;
+  public duree: number;
   public tarif: boolean;
   public description: string;
   public categorie: Categorie;

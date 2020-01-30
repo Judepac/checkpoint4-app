@@ -1,6 +1,6 @@
 <div id="cours">
   <h2>Les Cours</h2>
 
- <app-genre [genre]="genre" (cours)="openCours($event)" *ngIf=" !cours  || cours.length === 0"></app-genre>
- <app-discipline [cours]="cours" *ngIf="cours.length&gt;0"></app-discipline>
+ <app-genre [genre]="genre" [user]="user"(cours)="openCours($event)" *ngIf=" !cours  || cours.length === 0"></app-genre>
+ <app-discipline [cours]="cours" [user]="user" *ngIf="cours.length&gt;0"></app-discipline>
 </div>

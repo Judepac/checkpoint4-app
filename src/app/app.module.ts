@@ -1,6 +1,7 @@
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,8 @@ import { BienvenuComponent } from './components/bienvenu/bienvenu.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DisciplineComponent } from './page/accueil/cours/discipline/discipline.component';
 import { GenreComponent } from './page/accueil/cours/genre/genre.component';
+import { ReservationFormComponent } from './components/reservation-form/reservation-form.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,15 +30,21 @@ import { GenreComponent } from './page/accueil/cours/genre/genre.component';
     ContactComponent,
     BienvenuComponent,
     GenreComponent,
-    DisciplineComponent
+    DisciplineComponent,
+    ReservationFormComponent
     ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule,
+    FormsModule
   ],
   providers: [],
+  entryComponents: [
+    ReservationFormComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,6 +1,7 @@
 import { Discipline } from './../../../../models/discipline';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Genre } from '../../../../models/genre';
+import { User } from '../../../../models/user';
 
 @Component({
   selector: 'app-genre',
@@ -9,6 +10,7 @@ import { Genre } from '../../../../models/genre';
 })
 export class GenreComponent implements OnInit {
   @Input() genre: Genre[];
+  @Input() user: User;
   @Output() cours = new EventEmitter<Discipline>();
 
   constructor() { }
