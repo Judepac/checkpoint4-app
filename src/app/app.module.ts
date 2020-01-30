@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -5,11 +6,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AccueilComponent } from './page/accueil/accueil.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { QuiComponent } from './page/qui/qui.component';
-import { EquipeComponent } from './page/equipe/equipe.component';
-import { CoursComponent } from './page/cours/cours.component';
-import { ProfilComponent } from './page/profil/profil.component';
-
+import { QuiComponent } from './components/qui/qui.component';
+import { EquipeComponent } from './components/equipe/equipe.component';
+import { CoursComponent } from './components/cours/cours.component';
+import { ProfilComponent } from './components/profil/profil.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { BienvenuComponent } from './components/bienvenu/bienvenu.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,11 +20,14 @@ import { ProfilComponent } from './page/profil/profil.component';
     QuiComponent,
     EquipeComponent,
     CoursComponent,
-    ProfilComponent
-  ],
+    ProfilComponent,
+    ContactComponent,
+    BienvenuComponent
+    ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

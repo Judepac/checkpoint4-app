@@ -1,0 +1,28 @@
+.container{
+  height: 40vw;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h2{
+    font-size: 2vw;
+    font-family: Merriweather;
+    margin: 0 0 17px 4vw;
+
+  }
+  .flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+  .texte{
+    font-size: 1.4vw;
+    background-color: #CFE6EA;
+    border-radius: 20px;
+    text-align: justify;
+    width: 60vw;
+    padding: 2%;
+    box-shadow: 3px 3px 3px lightgrey, -3px -3px 3px lightgrey;
+  }
+}

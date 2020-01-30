@@ -1,0 +1,39 @@
+.container{
+  height: 89vh;
+  display: flex;
+  flex-direction: column;
+}
+.title{
+  border: 1px solid black;
+  text-align: center;
+  margin-top: 22vh;
+  h1 {
+    text-shadow: #f73535 10px 0 20px;
+    font-size: 5vw;
+    color: white;
+  }
+  p{
+    font-family: 'Merriweather';
+    font-size: 2vw;
+    font-style: italic;
+  }
+}
+img{
+  position: absolute;
+  top: 33vh;
+}
+.fleche{
+  position: absolute;
+  top: 60vh;
+  left: 50vw;
+  // transition-property: transform;
+  // transition-duration: 2s;
+  transition-timing-function: linear;
+  img{
+    height: 2vw;
+    width: 2vw;
+  }
+  img:hover{
+    transform: translateY(20px);
+  }
+}
