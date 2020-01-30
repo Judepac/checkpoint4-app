@@ -1,6 +1,5 @@
 import { Discipline } from './../../../../models/discipline';
-import { CoursService } from './../../../../services/cours.service';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Genre } from '../../../../models/genre';
 
 @Component({
@@ -10,6 +9,7 @@ import { Genre } from '../../../../models/genre';
 })
 export class GenreComponent implements OnInit {
   @Input() genre: Genre[];
+  @Output() cours = new EventEmitter<Discipline>();
 
   constructor() { }
 
@@ -17,6 +17,6 @@ export class GenreComponent implements OnInit {
   }
 
   openCours(cours: Discipline) {
-
+    this.cours.emit(cours);
   }
 }

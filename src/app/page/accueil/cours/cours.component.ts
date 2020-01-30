@@ -1,3 +1,4 @@
+import { Discipline } from './../../../models/discipline';
 import { CoursService } from './../../../services/cours.service';
 import { Component, OnInit } from '@angular/core';
 import { Genre } from '../../../models/genre';
@@ -9,6 +10,7 @@ import { Genre } from '../../../models/genre';
 })
 export class CoursComponent implements OnInit {
   genre: Genre [];
+  cours: Discipline[] = [];
 
   constructor(private coursService: CoursService) { }
 
@@ -17,5 +19,10 @@ export class CoursComponent implements OnInit {
       this.genre = data;
     });
   }
-
+  openCours(cours: Discipline[]) {
+    this.coursService.getGenre().subscribe( data => {
+      this.genre = data;
+    });
+    this.cours = cours;
+  }
 }

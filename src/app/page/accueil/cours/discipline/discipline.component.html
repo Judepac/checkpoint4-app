@@ -1,1 +1,4 @@
-<p>discipline works!</p>
+<div *ngFor="let item of cours">
+  <p>{{item.name}}</p>
+</div>
+<button (click)="resetCours()">Retour</button>
