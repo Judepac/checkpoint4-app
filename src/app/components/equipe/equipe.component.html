@@ -1,3 +1,19 @@
 <div id="equipe">
-  <p>equipe works!</p>
+  <h2>L'Equipe</h2>
+
+  <div class="flex">
+    <div *ngFor="let user of team" class="user">
+
+      <img [src]="user.image" alt="">
+
+      <div class="texte">
+        <h3>{{user.firstname}} {{user.lastname}}</h3>
+        <p><span>Domaine:</span> {{user.domaine}}</p>
+        <p>"{{user.citation}}"</p>
+      </div>
+
+    </div>
+
+  </div>
+
 </div>

@@ -12,6 +12,7 @@ import { CoursComponent } from './components/cours/cours.component';
 import { ProfilComponent } from './components/profil/profil.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { BienvenuComponent } from './components/bienvenu/bienvenu.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,8 @@ import { BienvenuComponent } from './components/bienvenu/bienvenu.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
