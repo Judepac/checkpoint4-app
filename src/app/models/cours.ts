@@ -7,7 +7,7 @@ export class Cours {
   public formateurName: string;
   public date: string;
   public time: string;
-  public liue: string;
+  public lieu: string;
   public disciplines: Discipline;
   public users: User[];
 

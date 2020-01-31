@@ -1,7 +1,6 @@
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgModule, LOCALE_ID } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,7 +16,18 @@ import { HttpClientModule } from '@angular/common/http';
 import { DisciplineComponent } from './page/accueil/cours/discipline/discipline.component';
 import { GenreComponent } from './page/accueil/cours/genre/genre.component';
 import { ReservationFormComponent } from './components/reservation-form/reservation-form.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import {MatDialogModule, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { MatDialogRef } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { registerLocaleData } from '@angular/common';
+import localeFr from '@angular/common/locales/fr';
+registerLocaleData(localeFr, 'fr');
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,10 +48,21 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     RouterModule,
     HttpClientModule,
-    NgbModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatButtonModule,
+    ReactiveFormsModule,
+    MatIconModule,
+    MatDialogModule,
+    MatFormFieldModule
+
   ],
-  providers: [],
+  providers: [ { provide: MAT_DIALOG_DATA, useValue: {} },
+    { provide: MatDialogRef, useValue: {} }, {
+      provide: LOCALE_ID,
+      useValue: 'fr'
+      }],
   entryComponents: [
     ReservationFormComponent
   ],

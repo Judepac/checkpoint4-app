@@ -1,3 +1,4 @@
+import { User } from './../models/user';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Genre } from '../models/genre';
@@ -18,5 +19,10 @@ export class CoursService {
 
   getCours(): Observable<Cours[]> {
     return this.http.get<Cours[]>(CoursService.URL + 'cours');
+  }
+
+  makeReservation(reservation: User, coursId: number): Observable<Cours> {
+
+    return this.http.post<Cours>(CoursService.URL + 'cours/initiation', {reservation, coursId});
   }
 }

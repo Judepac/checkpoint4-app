@@ -1,4 +1,50 @@
-<form >
+<form [formGroup]="reservationForm" (ngSubmit)="onFormSubmit(reservationForm.value, cours.id)">
+  <mat-icon class="material-icons" (click)="onNoClick()">close</mat-icon>
 
-  
+  <div class="titre">
+    <h2>Reservervation pour le cours {{cours.disciplines.name}}</h2>
+    <p>Formateur: <span class="un">{{cours.formateurName}}</span></p>
+  </div>
+
+  <div class="info">
+    <p class="gros">Le {{cours.date | date: 'shortDate'}} à {{cours.time}}</p>
+    <p><span class="un">Lieu:</span> {{cours.lieu}}</p>
+    <p>Capacité: {{cours.capacity}} personnes</p>
+  </div>
+
+  <div>Places restantes: ?</div>
+
+  <div class="formulaire">
+    <div class="oui">
+
+    <mat-form-field class="example-full-width non">
+      <label for="firstname">Prenom:</label>
+      <input matInput formControlName="firstname" >
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width non">
+      <label for="lastname">Nom:</label>
+      <input matInput formControlName="lastname" >
+    </mat-form-field>
+
+  </div>
+
+  <mat-form-field class="example-full-width">
+    <label for="age">Age:</label>
+    <input matInput formControlName="age">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <label for="phone">N° télephone:</label>
+    <input matInput formControlName="phone">
+  </mat-form-field>
+
+  <mat-form-field  class="example-full-width">
+    <label for="email">Email:</label>
+    <input matInput formControlName="email">
+</mat-form-field>
+
+</div>
+
+<button type="submit">Valider</button>
 </form>

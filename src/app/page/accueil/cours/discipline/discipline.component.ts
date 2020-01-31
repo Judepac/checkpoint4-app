@@ -2,9 +2,9 @@ import { CoursService } from './../../../../services/cours.service';
 import { Discipline } from './../../../../models/discipline';
 import { Component, OnInit, Input } from '@angular/core';
 import { User } from '../../../../models/user';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ReservationFormComponent } from '../../../../components/reservation-form/reservation-form.component';
 import { Cours } from '../../../../models/cours';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-discipline',
@@ -17,27 +17,37 @@ export class DisciplineComponent implements OnInit {
 
   arrayCours: Cours[];
 
-  constructor(private modalService: NgbModal, private coursService: CoursService) { }
+  constructor(public dialog: MatDialog, private coursService: CoursService) { }
 
   ngOnInit() {
     this.coursService.getCours().subscribe( (data: Cours[]) => {
       this.arrayCours = data;
-    }) ;
-
+    });
   }
 
   resetCours() {
     this.cours.length = 0;
   }
-  open(disciplineId: number) {
+  openDialog(disciplineId: number): void {
     let nextCours: Cours;
     this.arrayCours.forEach(element => {
       if (element.disciplines.id === disciplineId) {
         nextCours = element;
       }
     });
-    const modalRef = this.modalService.open(ReservationFormComponent, { centered: true });
-    modalRef.componentInstance.cours = nextCours;
-  }
+
+    const dialogRef = this.dialog.open(ReservationFormComponent, {
+    width: '45vw',
+    disableClose: true,
+    data: nextCours
+  });
+
+    dialogRef.afterClosed().subscribe(result => {
+
+  });
+}
+  //
+
+
 
 }
