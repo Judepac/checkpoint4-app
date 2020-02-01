@@ -19,32 +19,32 @@
 
     <mat-form-field class="example-full-width non">
       <label for="firstname">Prenom:</label>
-      <input matInput formControlName="firstname" >
+      <input matInput formControlName="firstname" required>
     </mat-form-field>
 
     <mat-form-field class="example-full-width non">
       <label for="lastname">Nom:</label>
-      <input matInput formControlName="lastname" >
+      <input matInput formControlName="lastname" required>
     </mat-form-field>
 
   </div>
 
   <mat-form-field class="example-full-width">
     <label for="age">Age:</label>
-    <input matInput formControlName="age">
+    <input matInput formControlName="age" [(ngModel)]="ageValidation" required>
   </mat-form-field>
 
   <mat-form-field class="example-full-width">
     <label for="phone">N° télephone:</label>
-    <input matInput formControlName="phone">
+    <input matInput formControlName="phone" maxlength="10" required>
   </mat-form-field>
 
   <mat-form-field  class="example-full-width">
     <label for="email">Email:</label>
-    <input matInput formControlName="email">
+    <input matInput formControlName="email" type="email" required>
 </mat-form-field>
 
 </div>
 
-<button type="submit">Valider</button>
+<button type="submit" [disabled]="ageValidation>cours.disciplines.categorie.ageEnd || cours.disciplines.categorie.ageStart>ageValidation">Valider</button>
 </form>

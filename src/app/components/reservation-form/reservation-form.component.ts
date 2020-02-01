@@ -1,3 +1,4 @@
+import { Discipline } from './../../models/discipline';
 import { User } from './../../models/user';
 import { CoursService } from './../../services/cours.service';
 import { Cours } from './../../models/cours';
@@ -13,6 +14,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class ReservationFormComponent implements OnInit {
 
   cours: Cours;
+  discipline: Discipline;
+  ageValidation: number;
   reservationForm: FormGroup;
 
   constructor(private fb: FormBuilder, public dialogRef: MatDialogRef<ReservationFormComponent>,
@@ -32,8 +35,6 @@ export class ReservationFormComponent implements OnInit {
   }
 
   onFormSubmit(reservation: User, coursId: number) {
-    console.log(reservation);
-
     this.coursService.makeReservation(reservation, coursId).subscribe(() => {
       this.dialogRef.close();
       });

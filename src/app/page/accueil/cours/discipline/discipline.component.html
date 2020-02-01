@@ -5,9 +5,10 @@
     <div *ngFor="let item of cours" class="trou">
         <h2>{{item.name}}</h2>
         <p>{{item.description}}</p>
+        <p>De {{item.categorie.ageStart}} ans à {{item.categorie.ageEnd}} ans.</p>
         <p><span>Durée:</span>{{item.duree}} minutes</p>
         <div *ngFor="let element of arrayCours">
-          <button *ngIf="item.tarif && element.disciplines.id == item.id" (click)="openDialog(item.id)">Réserver ce cours</button>
+          <button *ngIf="item.tarif && element.disciplines.id == item.id" (click)="openDialog(item)">Réserver ce cours</button>
           <button *ngIf="user?.role == 'wilder'">Réserver ce cours</button>
         </div>
     </div>

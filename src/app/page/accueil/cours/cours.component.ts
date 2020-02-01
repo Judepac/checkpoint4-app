@@ -13,7 +13,7 @@ import { User } from '../../../models/user';
 export class CoursComponent implements OnInit {
   genre: Genre [];
   cours: Discipline[] = [];
-  user: User;
+  // user: User;
 
   constructor(private coursService: CoursService, private userService: UserService) { }
 
@@ -22,7 +22,7 @@ export class CoursComponent implements OnInit {
       this.genre = data;
     });
 
-    this.user = this.userService.user;
+    // this.user = this.userService.user;
   }
   openCours(cours: Discipline[]) {
     this.coursService.getGenre().subscribe( data => {

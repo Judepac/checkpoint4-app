@@ -22,7 +22,6 @@ export class CoursService {
   }
 
   makeReservation(reservation: User, coursId: number): Observable<Cours> {
-
     return this.http.post<Cours>(CoursService.URL + 'cours/initiation', {reservation, coursId});
   }
 }

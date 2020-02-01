@@ -10,13 +10,14 @@ import { User } from '../models/user';
 })
 export class UserService {
   static URL = 'http://localhost:3000/user';
-  user: User;
+  users: User[];
 
   constructor(private http: HttpClient) { }
 
   getUser() {
-    return this.http.get(UserService.URL).pipe(tap( (data: User) => {
-      this.user = data;
+    return this.http.get(UserService.URL).pipe(tap( (data: User[]) => {
+      this.users = data;
     }));
   }
+
 }
