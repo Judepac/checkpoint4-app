@@ -26,6 +26,7 @@ import { MatDialogRef } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
+import { FooterComponent } from './components/footer/footer.component';
 registerLocaleData(localeFr, 'fr');
 
 @NgModule({
@@ -41,7 +42,8 @@ registerLocaleData(localeFr, 'fr');
     BienvenuComponent,
     GenreComponent,
     DisciplineComponent,
-    ReservationFormComponent
+    ReservationFormComponent,
+    FooterComponent
     ],
   imports: [
     BrowserModule,
