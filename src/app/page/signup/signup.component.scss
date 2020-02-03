@@ -1,0 +1,22 @@
+.signup{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  form{
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    font-size: 1.7vw;
+    background-color: white;
+    border-radius: 20px;
+    padding: 5%;
+    button{
+      font-size: 1vw;
+      font-family: Merriweather;
+      border-radius: 20px;
+      width: auto;
+    }
+  }
+}

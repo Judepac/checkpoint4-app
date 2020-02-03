@@ -9,7 +9,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { QuiComponent } from './components/qui/qui.component';
 import { EquipeComponent } from './components/equipe/equipe.component';
 import { CoursComponent } from './page/accueil/cours/cours.component';
-import { ProfilComponent } from './components/profil/profil.component';
+
 import { ContactComponent } from './components/contact/contact.component';
 import { BienvenuComponent } from './components/bienvenu/bienvenu.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -27,6 +27,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
 import { FooterComponent } from './components/footer/footer.component';
+import { SignupComponent } from './page/signup/signup.component';
+import { ProfilComponent } from './page/accueil/profil/profil.component';
 registerLocaleData(localeFr, 'fr');
 
 @NgModule({
@@ -43,7 +45,8 @@ registerLocaleData(localeFr, 'fr');
     GenreComponent,
     DisciplineComponent,
     ReservationFormComponent,
-    FooterComponent
+    FooterComponent,
+    SignupComponent
     ],
   imports: [
     BrowserModule,

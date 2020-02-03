@@ -1,13 +1,15 @@
 import { AccueilComponent } from './page/accueil/accueil.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ProfilComponent } from './components/profil/profil.component';
+import { ProfilComponent } from './page/accueil/profil/profil.component';
+import { SignupComponent } from './page/signup/signup.component';
 
 
 const routes: Routes = [
   {path: '', redirectTo: 'accueil', pathMatch: 'full'},
   {path: 'accueil', component : AccueilComponent},
-  { path: 'profil', component: ProfilComponent },
+  {path: 'profil', component: ProfilComponent },
+  {path: 'signup', component: SignupComponent}
 ];
 
 @NgModule({
