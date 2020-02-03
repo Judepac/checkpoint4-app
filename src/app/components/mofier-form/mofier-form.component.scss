@@ -1,0 +1,37 @@
+.titre{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: baseline;
+}
+.un{
+  font-family: Merriweather;
+  font-size: 1vw;
+  text-decoration: underline;
+}
+.info{
+  background-color: #CFE6EA ;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.gros{
+  font-size: 1vw;
+}
+.formulaire{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .example-full-width{
+    width: 60%;
+  }
+
+}
+.oui{
+  display: flex;
+  justify-content: space-between;
+}
+.non{
+  margin-right: 30px;
+}

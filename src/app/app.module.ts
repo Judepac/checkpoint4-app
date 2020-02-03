@@ -29,6 +29,10 @@ import localeFr from '@angular/common/locales/fr';
 import { FooterComponent } from './components/footer/footer.component';
 import { SignupComponent } from './page/signup/signup.component';
 import { ProfilComponent } from './page/accueil/profil/profil.component';
+import { WilderCoursComponent } from './components/wilder-cours/wilder-cours.component';
+import { WilderReservationComponent } from './components/wilder-reservation/wilder-reservation.component';
+import { AdminCoursComponent } from './components/admin-cours/admin-cours.component';
+import { MofierFormComponent } from './components/mofier-form/mofier-form.component';
 registerLocaleData(localeFr, 'fr');
 
 @NgModule({
@@ -46,7 +50,11 @@ registerLocaleData(localeFr, 'fr');
     DisciplineComponent,
     ReservationFormComponent,
     FooterComponent,
-    SignupComponent
+    SignupComponent,
+    WilderCoursComponent,
+    WilderReservationComponent,
+    AdminCoursComponent,
+    MofierFormComponent
     ],
   imports: [
     BrowserModule,
@@ -69,7 +77,8 @@ registerLocaleData(localeFr, 'fr');
       useValue: 'fr'
       }],
   entryComponents: [
-    ReservationFormComponent
+    ReservationFormComponent,
+    MofierFormComponent
   ],
   bootstrap: [AppComponent]
 })

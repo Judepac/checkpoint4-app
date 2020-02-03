@@ -1,2 +1,18 @@
-<app-navbar></app-navbar>
-<h3>Ca marche</h3>
+<div class="container">
+
+  <h2>Bonjour {{user.firstname}}</h2>
+  <div *ngIf="user.role !== 'admin'" class="wilder">
+
+    <app-wilder-cours [user]="user" class="side"></app-wilder-cours>
+    <app-wilder-reservation [user]="user" class="side"></app-wilder-reservation>
+
+  </div>
+
+  <div *ngIf="user.role === 'admin'" class="wilder">
+    <app-admin-cours></app-admin-cours>
+
+  </div>
+</div>
+
+
+

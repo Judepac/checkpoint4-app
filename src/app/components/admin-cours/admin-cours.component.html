@@ -1,0 +1,12 @@
+
+<div class="side">
+
+  <div *ngFor="let cours of listCourt" class="cours">
+    <p>{{cours.disciplines.name}}</p>
+    <p>Le {{cours.date | date:'shortDate'}}</p>
+    <p>à {{cours.time}}</p>
+    <p>avec {{cours.formateurName}}</p>
+    <button (click)="modifier(cours)">Modifier</button>
+  </div>
+  
+</div>

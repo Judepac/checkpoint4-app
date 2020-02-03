@@ -1,4 +1,3 @@
-import { Categorie } from './../../../../models/categorie';
 import { CoursService } from './../../../../services/cours.service';
 import { Discipline } from './../../../../models/discipline';
 import { Component, OnInit, Input } from '@angular/core';
@@ -6,7 +5,6 @@ import { User } from '../../../../models/user';
 import { ReservationFormComponent } from '../../../../components/reservation-form/reservation-form.component';
 import { Cours } from '../../../../models/cours';
 import { MatDialog } from '@angular/material/dialog';
-import { CategorieService } from '../../../../services/categorie.service';
 import { DisciplineService } from '../../../../services/discipline.service';
 
 @Component({

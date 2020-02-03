@@ -17,8 +17,6 @@ export class UserService {
   check(user: User) {
     return this.http.post(UserService.URL + '/signup', user).pipe(tap( (data: User) => {
       this.user = data;
-      console.log(this.user);
-      console.log(data);
     }));
   }
 

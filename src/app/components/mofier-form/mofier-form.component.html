@@ -1,0 +1,41 @@
+<form [formGroup]="modifierForm" (ngSubmit)="onFormSubmit(modifierForm.value)">
+  <mat-icon class="material-icons" (click)="onNoClick()">close</mat-icon>
+
+  <div class="titre">
+    <p>Modifier le cours</p>
+  </div>
+
+  <div class="formulaire">
+    <div class="oui">
+
+    <mat-form-field class="example-full-width non">
+      <label for="formateurName">Formateur:</label>
+      <input matInput formControlName="formateurName" required>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width non">
+      <label for="date">Date</label>
+      <input matInput formControlName="date" required>
+    </mat-form-field>
+
+  </div>
+
+  <mat-form-field class="example-full-width">
+    <label for="time">Heure</label>
+    <input matInput formControlName="time" required>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <label for="lieu">Lieu</label>
+    <input matInput formControlName="lieu" maxlength="10" required>
+  </mat-form-field>
+
+  <mat-form-field  class="example-full-width">
+    <label for="capacity">Capacité</label>
+    <input matInput formControlName="capacity" type="number" required>
+</mat-form-field>
+
+</div>
+
+<button type="submit">Valider</button>
+</form>

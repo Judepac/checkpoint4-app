@@ -1,0 +1,12 @@
+<div>
+  <h3 >Mes cours</h3>
+  <p *ngIf="myCours?.length<1">Vous n'avez pas réservé de cours pour le moment</p>
+
+  <div *ngFor="let cours of myCours" class="cours">
+    <p>{{cours.disciplines.name}}</p>
+    <p>Le {{cours.date | date:'shortDate'}}</p>
+    <p>à {{cours.time}}</p>
+    <p>avec {{cours.formateurName}}</p>
+  </div>
+
+</div>
