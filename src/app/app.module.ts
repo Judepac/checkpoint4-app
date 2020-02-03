@@ -27,6 +27,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
 import { FooterComponent } from './components/footer/footer.component';
+import { SignupComponent } from './components/signup/signup.component';
 registerLocaleData(localeFr, 'fr');
 
 @NgModule({
@@ -43,7 +44,8 @@ registerLocaleData(localeFr, 'fr');
     GenreComponent,
     DisciplineComponent,
     ReservationFormComponent,
-    FooterComponent
+    FooterComponent,
+    SignupComponent
     ],
   imports: [
     BrowserModule,

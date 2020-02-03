@@ -1,0 +1,18 @@
+
+<div *ngIf="signupForm" class="signup">
+
+  <form [formGroup]="signupForm" (ngSubmit)="onFormSubmit(signupForm.value)">
+    <mat-form-field class="example-full-width non">
+      <label for="email">Identifiant:</label>
+      <input matInput formControlName="email" type="email" required>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width non">
+      <label for="password">Password:</label>
+      <input matInput formControlName="password" required>
+    </mat-form-field>
+
+    <button type="submit">Valider</button>
+  </form>
+
+</div>
